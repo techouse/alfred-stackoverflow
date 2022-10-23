@@ -1,0 +1,1 @@
+# StackExchange Search for Alfred

@@ -1,0 +1,18 @@
+name: alfred_stackexchange_workflow
+description: A sample command-line application.
+
+# Prevent accidental publishing to pub.dev.
+publish_to: 'none'
+
+version: 0.0.1
+
+environment:
+  sdk: '>=2.18.2 <3.0.0'
+
+dependencies:
+  args: ^2.3.1
+  alfred_workflow: ^0.2.6
+
+dev_dependencies:
+  lints: ^2.0.1
+  dart_code_metrics: ^4.21.2
