@@ -11,5 +11,7 @@ build/
 # macOS specific
 .DS_Store
 
-bin/query_cache/
+bin/*_cache/
 sign.sh
+
+.env

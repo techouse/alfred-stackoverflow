@@ -1,13 +1,17 @@
 include: package:lints/recommended.yaml
 
 analyzer:
+  exclude:
+    - "**.g.dart"
+    - "**.chopper.dart"
   plugins:
     - dart_code_metrics
 
 dart_code_metrics:
   metrics:
     cyclomatic-complexity: 20
-    number-of-arguments: 4
+    number-of-arguments: 5
+    number-of-parameters: 5
     maximum-nesting-level: 5
   metrics-exclude:
     - test/**
@@ -26,3 +30,4 @@ linter:
   rules:
     avoid_print: true
     prefer_single_quotes: true
+    prefer_relative_imports: false
