@@ -1,1 +1,1 @@
-# StackExchange Search for Alfred
+# StackOverflow Search for Alfred
