@@ -50,6 +50,7 @@ Future<void> _performSearch({
       siteId: 'stackoverflow',
       query: query,
       tagged: tags,
+      answers: 1,
       page: 1,
       pageSize: 20,
     );
@@ -71,7 +72,9 @@ Future<void> _performSearch({
                 copy: question.link.toString(),
               ),
               quickLookUrl: question.link.toString(),
-              icon: AlfredItemIcon(path: 'icon.png'),
+              icon: AlfredItemIcon(
+                path: question.isAnswered ? 'icon_check.png' : 'icon.png',
+              ),
               valid: true,
             ),
         ],
