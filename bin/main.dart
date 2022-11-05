@@ -30,15 +30,9 @@ void main(List<String> arguments) {
 
       final ArgParser parser = ArgParser()
         ..addOption('query', abbr: 'q', defaultsTo: '')
-        ..addOption('delay', abbr: 'd', defaultsTo: '0')
         ..addFlag('verbose', abbr: 'v', defaultsTo: false)
         ..addFlag('update', abbr: 'u', defaultsTo: false);
       final ArgResults args = parser.parse(arguments);
-
-      int? delay = int.tryParse(args['delay']);
-      if (delay != null && delay > 0) {
-        await Future.delayed(Duration(milliseconds: delay));
-      }
 
       _update = args['update'];
       if (_update) {
