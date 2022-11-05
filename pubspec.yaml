@@ -4,7 +4,7 @@ description: Search for answers on StackOverflow from Alfred
 # Prevent accidental publishing to pub.dev.
 publish_to: 'none'
 
-version: 0.0.1
+version: 0.0.2
 
 environment:
   sdk: '>=2.18.2 <3.0.0'
@@ -13,7 +13,6 @@ dependencies:
   args: ^2.3.1
   alfred_workflow: ^0.2.6
   autoequal: ^0.4.1
-  chopper: ^5.1.0
   cli_script: ^0.2.6
   crypto: ^3.0.1
   collection: ^1.16.0
@@ -28,7 +27,6 @@ dependencies:
 dev_dependencies:
   autoequal_gen: ^0.4.1
   build_runner: ^2.3.2
-  chopper_generator: ^5.1.0+1
   dart_code_metrics: ^4.19.0
   envied_generator: ^0.2.3
   json_serializable: ^6.5.3

@@ -4,17 +4,17 @@ import 'dart:io' show exitCode, stdout;
 
 import 'package:alfred_workflow/alfred_workflow.dart';
 import 'package:args/args.dart';
-import 'package:chopper/chopper.dart';
 import 'package:cli_script/cli_script.dart';
 import 'package:collection/collection.dart';
 import 'package:html_unescape/html_unescape.dart';
+import 'package:http/http.dart' as http show ClientException;
 import 'package:stash/stash_api.dart';
 
-import 'src/api/api.dart';
 import 'src/env/env.dart';
 import 'src/extensions/string_helpers.dart';
 import 'src/models/item_list.dart';
 import 'src/models/question.dart';
+import 'src/api/stack_exchange_service.dart';
 
 part 'main_helpers.dart';
 

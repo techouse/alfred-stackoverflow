@@ -1,3 +1,5 @@
+// ignore_for_file: long-method
+
 part of 'main.dart';
 
 final HtmlUnescape _unescape = HtmlUnescape();
@@ -18,7 +20,7 @@ final AlfredUpdater _updater = AlfredUpdater(
   updateInterval: Duration(days: 1),
 );
 
-final Api _api = Api();
+// final Api _api = Api();
 
 const updateItem = AlfredItem(
   title: 'Auto-Update available!',
@@ -43,19 +45,20 @@ Future<void> _performSearch({
   required String query,
   Set<String>? tags,
 }) async {
-  final Response<ItemList<Question>> response = await _api.service.search(
-    siteId: 'stackoverflow',
-    query: query,
-    tagged: tags,
-    page: 1,
-    pageSize: 20,
-  );
+  try {
+    final ItemList<Question> questions = await StackExchangeService.search(
+      siteId: 'stackoverflow',
+      query: query,
+      tagged: tags,
+      page: 1,
+      pageSize: 20,
+    );
 
-  if (response.isSuccessful && (response.body?.isNotEmpty ?? false)) {
-    _workflow.addItems(
-      response.body!
-          .map(
-            (Question question) => AlfredItem(
+    if (questions.isNotEmpty) {
+      _workflow.addItems(
+        <AlfredItem>[
+          for (final Question question in questions)
+            AlfredItem(
               uid: question.id.toString(),
               title: _unescape.convert(question.title),
               subtitle: _unescape.convert(question.tags.join(', ')),
@@ -71,23 +74,30 @@ Future<void> _performSearch({
               icon: AlfredItemIcon(path: 'icon.png'),
               valid: true,
             ),
-          )
-          .toList(),
-    );
-  } else {
-    final Uri url = Uri.https('www.google.com', '/search', {'q': query});
+        ],
+      );
+    } else {
+      final Uri url = Uri.https('www.google.com', '/search', {'q': query});
 
+      _workflow.addItem(
+        AlfredItem(
+          title: 'No matching questions found',
+          subtitle: 'Shall I try and search Google?',
+          arg: url.toString(),
+          text: AlfredItemText(copy: url.toString()),
+          quickLookUrl: url.toString(),
+          icon: AlfredItemIcon(path: 'google.png'),
+          valid: true,
+        ),
+      );
+    }
+  } on http.ClientException catch (error) {
     _workflow.addItem(
       AlfredItem(
-        title: 'No matching questions found',
-        subtitle: 'Shall I try and search Google?',
-        arg: url.toString(),
-        text: AlfredItemText(
-          copy: url.toString(),
-        ),
-        quickLookUrl: url.toString(),
-        icon: AlfredItemIcon(path: 'google.png'),
-        valid: true,
+        title: 'StackExchange API Error',
+        subtitle: error.message,
+        text: AlfredItemText(copy: error.message),
+        valid: false,
       ),
     );
   }

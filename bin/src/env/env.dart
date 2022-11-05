@@ -10,8 +10,8 @@ abstract class Env {
   @EnviedField(varName: 'GITHUB_REPOSITORY_URL')
   static const String githubRepositoryUrl = _Env.githubRepositoryUrl;
 
-  @EnviedField(varName: 'STACK_EXCHANGE_API_BASE_URL')
-  static const String stackExchangeBaseUrl = _Env.stackExchangeBaseUrl;
+  @EnviedField(varName: 'STACK_EXCHANGE_API_VERSION')
+  static const String stackExchangeApiVersion = _Env.stackExchangeApiVersion;
 
   @EnviedField(varName: 'STACK_EXCHANGE_API_KEY', obfuscate: true)
   static final String stackExchangeApiKey = _Env.stackExchangeApiKey;

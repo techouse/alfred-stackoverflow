@@ -104,7 +104,7 @@
 				<key>queuedelaymode</key>
 				<integer>2</integer>
 				<key>queuemode</key>
-				<integer>2</integer>
+				<integer>1</integer>
 				<key>runningsubtext</key>
 				<string>Fetching StackOverflow questions ...</string>
 				<key>script</key>
@@ -221,7 +221,7 @@
 	<key>variablesdontexport</key>
 	<array/>
 	<key>version</key>
-	<string>0.0.1</string>
+	<string>0.0.2</string>
 	<key>webaddress</key>
 	<string>https://github.com/techouse/alfred-stackoverflow</string>
 </dict>
