@@ -20,8 +20,6 @@ final AlfredUpdater _updater = AlfredUpdater(
   updateInterval: Duration(days: 1),
 );
 
-// final Api _api = Api();
-
 const updateItem = AlfredItem(
   title: 'Auto-Update available!',
   subtitle: 'Press <enter> to auto-update to a new version of this workflow.',
