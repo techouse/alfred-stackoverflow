@@ -12,7 +12,7 @@ final AlfredWorkflow _workflow = AlfredWorkflow(
       Duration(days: 7),
     ),
   ),
-);
+)..disableAlfredSmartResultOrdering = true;
 
 final AlfredUpdater _updater = AlfredUpdater(
   githubRepositoryUrl: Uri.parse(Env.githubRepositoryUrl),
