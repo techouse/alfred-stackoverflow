@@ -11,23 +11,23 @@ environment:
 
 dependencies:
   args: ^2.3.1
-  alfred_workflow: ^0.2.6
-  autoequal: ^0.4.1
-  cli_script: ^0.2.6
-  crypto: ^3.0.1
-  collection: ^1.16.0
-  envied: ^0.2.3
+  alfred_workflow: ^0.3.0+1
+  autoequal: ^0.5.1
+  cli_script: ^0.3.0
+  crypto: ^3.0.2
+  collection: ^1.17.0
+  envied: ^0.3.0
   equatable: ^2.0.5
   html_unescape: ^2.0.0
   http: ^0.13.5
   json_annotation: ^4.7.0
-  path: ^1.8.1
-  stash: ^4.3.1
+  path: ^1.8.3
+  stash: ^4.4.1
 
 dev_dependencies:
-  autoequal_gen: ^0.4.1
-  build_runner: ^2.3.2
-  dart_code_metrics: ^4.19.0
-  envied_generator: ^0.2.3
-  json_serializable: ^6.5.3
+  autoequal_gen: ^0.5.1
+  build_runner: ^2.3.3
+  dart_code_metrics: ^5.3.0
+  envied_generator: ^0.3.0
+  json_serializable: ^6.5.4
   lints: ^2.0.1
