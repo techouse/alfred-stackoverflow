@@ -8,12 +8,11 @@ part of 'question.dart';
 
 mixin _$QuestionAutoequalMixin on EquatableMixin {
   @override
-  List<Object?> get props =>
-      _$QuestionAutoequal(this as Question)._autoequalProps;
+  List<Object?> get props => _$QuestionAutoequal(this as Question)._$props;
 }
 
 extension _$QuestionAutoequal on Question {
-  List<Object?> get _autoequalProps => [
+  List<Object?> get _$props => [
         id,
         title,
         link,
