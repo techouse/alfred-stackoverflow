@@ -10,11 +10,11 @@ import 'package:html_unescape/html_unescape.dart';
 import 'package:http/http.dart' as http show ClientException;
 import 'package:stash/stash_api.dart';
 
+import 'src/api/stack_exchange_service.dart';
 import 'src/env/env.dart';
 import 'src/extensions/string_helpers.dart';
 import 'src/models/item_list.dart';
 import 'src/models/question.dart';
-import 'src/api/stack_exchange_service.dart';
 
 part 'main_helpers.dart';
 
