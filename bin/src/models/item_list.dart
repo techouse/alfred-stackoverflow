@@ -5,11 +5,11 @@ class ItemList<E> extends DelegatingList<E>
     with EquatableMixin
     implements List<E> {
   const ItemList(
-    List<E> items, {
+    super.items, {
     this.hasMore = false,
     this.quotaMax = 0,
     this.quotaRemaining = 0,
-  }) : super(items);
+  });
 
   final bool hasMore;
   final int quotaMax;
