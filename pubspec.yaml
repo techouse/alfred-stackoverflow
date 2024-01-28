@@ -4,19 +4,19 @@ description: Search for answers on StackOverflow from Alfred
 # Prevent accidental publishing to pub.dev.
 publish_to: 'none'
 
-version: 1.0.6
+version: 1.0.7
 
 environment:
   sdk: '>=3.2.0 <4.0.0'
 
 dependencies:
   args: ^2.4.2
-  alfred_workflow: ^0.6.0
-  autoequal: ^0.7.1
+  alfred_workflow: ^0.6.1
+  autoequal: ^0.9.1
   cli_script: ^1.0.0
   crypto: ^3.0.3
   collection: ^1.18.0
-  envied: ^0.5.2
+  envied: ^0.5.3
   equatable: ^2.0.5
   html_unescape: ^2.0.0
   http: ^1.1.2
@@ -25,8 +25,8 @@ dependencies:
   stash: ^5.0.3
 
 dev_dependencies:
-  autoequal_gen: ^0.7.1
+  autoequal_gen: ^0.9.1
   build_runner: ^2.4.7
-  envied_generator: ^0.5.2
+  envied_generator: ^0.5.3
   json_serializable: ^6.7.1
   lints: ^3.0.0

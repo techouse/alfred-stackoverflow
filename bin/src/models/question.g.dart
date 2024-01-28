@@ -6,13 +6,7 @@ part of 'question.dart';
 // AutoequalGenerator
 // **************************************************************************
 
-mixin _$QuestionAutoequalMixin on EquatableMixin {
-  @override
-  List<Object?> get props => _$QuestionAutoequal((this as Question))._$props;
-}
-
 extension _$QuestionAutoequal on Question {
-  List<Object?> get _autoequalProps => _$props;
   List<Object?> get _$props => [
         id,
         title,

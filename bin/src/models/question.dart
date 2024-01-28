@@ -6,10 +6,10 @@ import '../api/datetime_unix_timestamp_converter.dart';
 
 part 'question.g.dart';
 
-@autoequalMixin
+@autoequal
 @JsonSerializable()
 @DateTimeUnixTimestampConverter.instance
-class Question with EquatableMixin, _$QuestionAutoequalMixin {
+class Question with EquatableMixin {
   const Question({
     required this.id,
     required this.title,
@@ -45,4 +45,7 @@ class Question with EquatableMixin, _$QuestionAutoequalMixin {
       _$QuestionFromJson(json);
 
   Map<String, dynamic> toJson() => _$QuestionToJson(this);
+
+  @override
+  List<Object?> get props => _$props;
 }
